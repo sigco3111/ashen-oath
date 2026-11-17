@@ -1,6 +1,6 @@
 # Third-party notices
 
-Ashen Oath v0.1.24 is a playable game build, not an animation library, asset pack or reusable template.
+Ashen Oath v0.1.25 is a playable game build, not an animation library, asset pack or reusable template.
 
 ## Character model
 Shadowflame Samurai by dark_igorek.
