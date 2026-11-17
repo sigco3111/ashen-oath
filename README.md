@@ -2,9 +2,13 @@
 
 독자적인 세계를 가진 높은 쿼터뷰 액션 RPG. Diablo II의 장비 파밍·직업 빌드·난이도 재도전 구조에서 영감을 얻지만, 원작의 이미지·로고·이야기·지도·음원을 사용하지 않습니다. Blizzard와 관련이 없습니다.
 
-**개발 중인 작은 전투장 v0.1.1**입니다. 전체 기획의 완성판이 아닙니다.
+**개발 중인 작은 전투장 v0.1.2-motion**입니다. 전체 기획의 완성판이 아닙니다.
 
 플레이: https://sigco3111.github.io/ashen-oath/
+
+## 동작 수정 1차
+
+SamuraiThirdPersonTemplateThreeJS의 이동·공격 전환을 참고해 자체 동작을 수정했습니다. 준비-타격-복귀 단계, 타격 시점 피해, 관절 전환, 회전 베기와 도약 경로를 추가했습니다. 원본의 애니메이션 파일은 포함하지 않았으며, 동작 품질은 계속 다듬는 중입니다.
 
 ## 지금 들어 있는 것
 - 전사·원소술사 2직업, 공통 Samurai 몸체와 자체 계산 동작
@@ -29,14 +33,14 @@ PC: WASD / 방향키 이동, Space 기본 공격, 1·2·3 기술, Q 물약, F �
 게임 안 물약은 게임 골드만 사용합니다. 실제 결제는 없습니다. 저장은 현재 브라우저·기기별이며 자동 동기화하지 않습니다.
 
 ## 구조와 빌드
-- `11-game.js` (원본 이름 game.js): 직접 작성한 게임 로직
-- `10-app.js` (번들): Three.js와 로더를 포함한 배포용 ESM 번들
+- `2-game.js` (원본 이름 game.js): 직접 작성한 게임 로직
+- `1-motion-app.js` (번들): Three.js와 로더를 포함한 배포용 ESM 번들
 - `2-style.css`, `index.html`: UI
 - `5-samurai.glb`: 공통 캐릭터, 텍스처 축소·형식 변환. Mixamo 애니메이션 파일 없음.
 
 ```
 npm install three@0.187.0 esbuild
-npx esbuild 11-game.js --bundle --format=esm --minify --outfile=10-app.js
+npx esbuild 2-game.js --bundle --format=esm --minify --outfile=1-motion-app.js
 ```
 
 GitHub Pages는 main 브랜치 루트 폴더 기준입니다. 비밀키와 서버가 없는 정적 클라이언트입니다. 하위 경로를 지원하도록 로컬 자산은 상대 경로로 연결했습니다.
