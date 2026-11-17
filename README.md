@@ -1,6 +1,6 @@
 # 잿빛 서약 · Ashen Oath
 
-높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.12-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
+높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.13-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
 
 **플레이:** https://sigco3111.github.io/ashen-oath/
 
@@ -23,7 +23,7 @@ SamuraiThirdPersonTemplateThreeJS의 이동·공격 전환을 참고했습니다
 - 칼날 궤적, 실제 착지 위치에 맞춘 도약 피해, 피격·쓰러짐 전환.
 - 손에서 나가는 투사체, 서리·방벽·운석, 직업별 시전 자세.
 - 적의 보행·공격 준비·내려치기·피격 반응. 적도 즉시 기울지 않고 쓰러지며, 시간이 지나면 잔해가 가라앉습니다.
-- 보행 보폭과 속도·상하 흔들림을 다시 조정했습니다.
+- 보행 보폭과 속도·상하 흔들림을 다시 조정했습니다. 모바일 스틱은 조금 밀면 천천히, 끝까지 밀면 빠르게 이동하며 대각선 속도는 제한합니다.
 - 공격 끝무렵의 짧은 수동 입력 여유. 이동·일시정지·화면 이탈 시 취소합니다.
 - 적이 없을 때도 향한 방향으로 수동 공격·시전·도약이 가능합니다. 베기 중 다가온 적과 자유 발사 투사체 경로에 들어온 적도 맞습니다.
 - 저프레임 투사체 접촉과 장애물 주변 길찾기 보완. 정신력이 부족하면 자동 전투는 기본 공격을 이어갑니다.
@@ -45,14 +45,14 @@ SamuraiThirdPersonTemplateThreeJS의 이동·공격 전환을 참고했습니다
 정적 HTTP 서버에서 저장소를 제공하면 됩니다. `file://`로 파일을 직접 열면 모델을 불러올 수 없습니다.
 
 - `index.html`, `2-style.css`: 화면과 조작 UI
-- `2-ao-game-v0112.js`: 읽을 수 있는 게임 소스
-- `1-ao-motion-v0112.js`: Three.js·로더를 포함한 배포 번들
+- `2-ao-game-v0113.js`: 읽을 수 있는 게임 소스
+- `1-ao-motion-v0113.js`: Three.js·로더를 포함한 배포 번들
 - `5-samurai.glb`: 변환·텍스처 축소한 플레이어 모델
 
 다시 빌드하려면:
 ```sh
 npm install three esbuild
-npx esbuild 2-ao-game-v0112.js --bundle --format=esm --minify --outfile=1-ao-motion-v0112.js
+npx esbuild 2-ao-game-v0113.js --bundle --format=esm --minify --outfile=1-ao-motion-v0113.js
 ```
 
 ## 출처와 권리
