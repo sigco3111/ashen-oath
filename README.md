@@ -2,7 +2,7 @@
 
 독자적인 세계를 가진 높은 쿼터뷰 액션 RPG. Diablo II의 장비 파밍·직업 빌드·난이도 재도전 구조에서 영감을 얻지만, 원작의 이미지·로고·이야기·지도·음원을 사용하지 않습니다. Blizzard와 관련이 없습니다.
 
-**개발 중인 작은 전투장 v0.1.7-motion**입니다. 전체 기획의 완성판이 아닙니다.
+**개발 중인 작은 전투장 v0.1.8-motion**입니다. 전체 기획의 완성판이 아닙니다.
 
 플레이: https://sigco3111.github.io/ashen-oath/
 
@@ -13,6 +13,8 @@ SamuraiThirdPersonTemplateThreeJS의 이동·공격 전환을 참고해 자체 �
 적에게 이동 거리 기반 다리·팔 움직임, 공격 준비와 피격 반응을 더했습니다. 플레이어 피격 반응과 방어 지속 시각 표시도 보완했습니다. 사망 손실 수치는 시험용이며 최종 확정 전입니다.
 
 수동 공격 끝무렵의 다음 입력을 짧게 받아 주도록 보완하고, 도약 피해는 실제 착지 위치에 맞췄습니다. 쓰러짐 전환과 귀환 초기화도 다듬었습니다.
+
+원소술사의 몸통 동작을 근접 베기와 나누어 시전 자세를 다듬고, 적의 공격 준비-내려치기 단계를 보완했습니다. 이동·일시정지·화면 이탈 시 예약된 수동 입력도 취소합니다.
 
 ## 지금 들어 있는 것
 - 전사·원소술사 2직업, 공통 Samurai 몸체와 자체 계산 동작
@@ -37,14 +39,14 @@ PC: WASD / 방향키 이동, Space 기본 공격, 1·2·3 기술, Q 물약, F �
 게임 안 물약은 게임 골드만 사용합니다. 실제 결제는 없습니다. 저장은 현재 브라우저·기기별이며 자동 동기화하지 않습니다.
 
 ## 구조와 빌드
-- `2-ao-game-v017.js` (원본 이름 game.js): 직접 작성한 게임 로직
-- `1-ao-motion-v017.js` (번들): Three.js와 로더를 포함한 배포용 ESM 번들
+- `2-ao-game-v018.js` (원본 이름 game.js): 직접 작성한 게임 로직
+- `1-ao-motion-v018.js` (번들): Three.js와 로더를 포함한 배포용 ESM 번들
 - `2-style.css`, `index.html`: UI
 - `5-samurai.glb`: 공통 캐릭터, 텍스처 축소·형식 변환. Mixamo 애니메이션 파일 없음.
 
 ```
 npm install three@0.187.0 esbuild
-npx esbuild 2-ao-game-v017.js --bundle --format=esm --minify --outfile=1-ao-motion-v017.js
+npx esbuild 2-ao-game-v018.js --bundle --format=esm --minify --outfile=1-ao-motion-v018.js
 ```
 
 GitHub Pages는 main 브랜치 루트 폴더 기준입니다. 비밀키와 서버가 없는 정적 클라이언트입니다. 하위 경로를 지원하도록 로컬 자산은 상대 경로로 연결했습니다.
