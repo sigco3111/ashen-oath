@@ -1,6 +1,6 @@
 # 잿빛 서약 · Ashen Oath
 
-높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.18-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
+높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.19-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
 
 **플레이:** https://sigco3111.github.io/ashen-oath/
 
@@ -19,6 +19,7 @@ Diablo II의 장비 파밍·직업 빌드·난이도 재도전 구조에서 영�
 ## 동작과 입력
 SamuraiThirdPersonTemplateThreeJS의 이동·공격 전환을 참고했습니다. 원본 애니메이션 파일을 배포하지 않고, 관절 자세와 보간을 코드로 계산합니다. 원본과 같은 동작 품질을 달성했다는 뜻은 아닙니다.
 
+- 이동 거리에 맞춘 발 디딤·발 회수와 무릎 위치 계산. 저속에서는 보폭도 작아집니다.
 - 이동 거리와 연결된 보행, 공격 준비·타격·복귀, 타격 시점의 피해 판정.
 - 칼날 궤적, 실제 착지 위치에 맞춘 도약 피해, 피격·쓰러짐 전환.
 - 도약 강타는 일반 베기 대신 머리 위 준비·내려찍기·착지 회복의 전용 자세를 사용합니다.
@@ -47,14 +48,14 @@ PC Space와 모바일 기본 공격 버튼은 누르고 있으면 반복 공격�
 정적 HTTP 서버에서 저장소를 제공하면 됩니다. `file://`로 파일을 직접 열면 모델을 불러올 수 없습니다.
 
 - `index.html`, `2-style.css`: 화면과 조작 UI
-- `6-ao-game-v0118.js`: 읽을 수 있는 게임 소스
-- `5-ao-motion-v0118.js`: Three.js·로더를 포함한 배포 번들
+- `2-ao-game-v0119.js`: 읽을 수 있는 게임 소스
+- `1-ao-motion-v0119.js`: Three.js·로더를 포함한 배포 번들
 - `5-samurai.glb`: 변환·텍스처 축소한 플레이어 모델
 
 다시 빌드하려면:
 ```sh
 npm install three esbuild
-npx esbuild 6-ao-game-v0118.js --bundle --format=esm --minify --outfile=5-ao-motion-v0118.js
+npx esbuild 2-ao-game-v0119.js --bundle --format=esm --minify --outfile=1-ao-motion-v0119.js
 ```
 
 ## 출처와 권리
