@@ -1,6 +1,6 @@
 # 잿빛 서약 · Ashen Oath
 
-높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.17-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
+높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.18-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
 
 **플레이:** https://sigco3111.github.io/ashen-oath/
 
@@ -47,14 +47,14 @@ PC Space와 모바일 기본 공격 버튼은 누르고 있으면 반복 공격�
 정적 HTTP 서버에서 저장소를 제공하면 됩니다. `file://`로 파일을 직접 열면 모델을 불러올 수 없습니다.
 
 - `index.html`, `2-style.css`: 화면과 조작 UI
-- `4-ao-game-v0117.js`: 읽을 수 있는 게임 소스
-- `3-ao-motion-v0117.js`: Three.js·로더를 포함한 배포 번들
+- `6-ao-game-v0118.js`: 읽을 수 있는 게임 소스
+- `5-ao-motion-v0118.js`: Three.js·로더를 포함한 배포 번들
 - `5-samurai.glb`: 변환·텍스처 축소한 플레이어 모델
 
 다시 빌드하려면:
 ```sh
 npm install three esbuild
-npx esbuild 4-ao-game-v0117.js --bundle --format=esm --minify --outfile=3-ao-motion-v0117.js
+npx esbuild 6-ao-game-v0118.js --bundle --format=esm --minify --outfile=5-ao-motion-v0118.js
 ```
 
 ## 출처와 권리
