@@ -1,10 +1,15 @@
 # 잿빛 서약 · Ashen Oath
 
-높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.21-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
+높은 쿼터뷰의 싱글 액션 RPG 개발 확인판 **v0.1.22-motion**입니다. 아직 작은 전투장 하나이며, 전체 기획이나 첫 시험판의 완성본이 아닙니다.
 
 **플레이:** https://sigco3111.github.io/ashen-oath/
 
 Diablo II의 장비 파밍·직업 빌드·난이도 재도전 구조에서 영감을 얻었습니다. 세계·이야기·배경·적·게임 규칙은 이 프로젝트의 것이며, 원작의 이미지·로고·지도·대사·음원을 쓰지 않습니다. Blizzard와 관련이 없습니다.
+
+## v0.1.22 보행 팔 동작
+- 보행 중 손의 이동을 발 디딤과 반대로 맞춰 팔꿈치가 함께 움직이도록 했습니다.
+- 전사의 검 방향은 이동·정지 중 아래쪽을 유지하고 공격 때 별도 자세로 전환합니다.
+- 여러 방향·저속·정지에서 확인했지만 전체 동작 품질은 여전히 개발 중입니다.
 
 ## v0.1.21 시전 동작
 - 원소술사의 시전 중 발 지지와 상체 준비·방출 자세를 조정했습니다.
@@ -54,14 +59,14 @@ PC Space와 모바일 기본 공격 버튼은 누르고 있으면 반복 공격�
 정적 HTTP 서버에서 저장소를 제공하면 됩니다. `file://`로 파일을 직접 열면 모델을 불러올 수 없습니다.
 
 - `index.html`, `2-style.css`: 화면과 조작 UI
-- `2-ao-game-v0120.js`: 읽을 수 있는 게임 소스
-- `1-ao-motion-v0120.js`: Three.js·로더를 포함한 배포 번들
+- `2-ao-game-v0122.js`: 읽을 수 있는 게임 소스
+- `1-ao-motion-v0122.js`: Three.js·로더를 포함한 배포 번들
 - `5-samurai.glb`: 변환·텍스처 축소한 플레이어 모델
 
 다시 빌드하려면:
 ```sh
 npm install three esbuild
-npx esbuild 2-ao-game-v0120.js --bundle --format=esm --minify --outfile=1-ao-motion-v0120.js
+npx esbuild 2-ao-game-v0122.js --bundle --format=esm --minify --outfile=1-ao-motion-v0122.js
 ```
 
 ## 출처와 권리
